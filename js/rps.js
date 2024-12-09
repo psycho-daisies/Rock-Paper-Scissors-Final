@@ -1,6 +1,6 @@
 // Troy Brunette
-// SD230 - Web Programming - Project 2 - Rock Paper Scissors Part 2
-// 11/09/2024
+// SD230 - Web Programming - Final Project - Rock Paper Scissors
+// 12/06/2024
 
 /**
  * Player class for the game Rock Paper Scissors

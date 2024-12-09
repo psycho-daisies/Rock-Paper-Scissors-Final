@@ -1,0 +1,46 @@
+/* Animation Effects for Links */
+@keyframes jiggle {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(-10deg);
+    }
+
+    50% {
+        transform: rotate(10deg);
+    }
+
+    75% {
+        transform: rotate(-10deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+
+#start-button:hover {
+    transform: scale(1.2);
+    animation: jiggle 0.4s ease-in-out infinite;
+}
+
+#start-button:active {
+    transform: scale(1.1);
+}
+
+
+#reset-button:active {
+    transform: scale(1.1);
+}
+
+/* Hover Effect for the hands - make sure it doesn't work on the selected */
+.hand-rock-regular:not(.selected):hover,
+.hand-scissors-regular:not(.selected):hover,
+.hand-paper-regular:not(.selected):hover {
+    transform: scale(1.1);
+    fill: #0077cc;
+    animation: jiggle 0.4s ease-in-out infinite;
+}

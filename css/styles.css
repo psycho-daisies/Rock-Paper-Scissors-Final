@@ -14,7 +14,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 90vh;
+    height: 100vh;
     width: 100vw;
 }
 
@@ -26,7 +26,7 @@ header {
 }
 
 header h1 {
-    font-size: 4em;
+    font-size: 6em;
     color: #ffffff;
     margin: 0;
 }
@@ -39,7 +39,7 @@ header h2 {
 }
 
 .hand {
-    width: 100px;
+    width: 300px;
     height: auto;
     cursor: pointer;
     transition: transform 0.3s ease, fill 0.3s ease;
@@ -123,4 +123,57 @@ button.rectangle-1:hover {
     margin-top: 20px;
     font-size: 1.5em;
     color: #ffffff;
+}
+
+@media (max-width: 1200px), (max-height: 600px) {
+    header h1 {
+        font-size: 4em;
+    }
+
+    header h2 {
+        font-size: 1.2em;
+    }
+
+    .hand {
+        width: 200px;
+    }
+
+    .hands-container {
+        gap: 10px;
+    }
+
+    button.rectangle-1 {
+        font-size: 16px;
+    }
+
+    #score-display {
+        font-size: 1.2em;
+    }
+    
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    header h2 {
+        font-size: 1em;
+    }
+
+    .hand {
+        width: 120px;
+    }
+
+    .hands-container {
+        gap: 5px;
+    }
+
+    button.rectangle-1 {
+        font-size: 14px;
+    }
+
+    #score-display {
+        font-size: 1em;
+    }
 }
