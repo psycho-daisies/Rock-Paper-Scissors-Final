@@ -1,4 +1,4 @@
-/* Global Styles */
+/* Stylesheet for Rock Paper Scissors */
 body {
     background: linear-gradient(90deg, #0B92DE 0%, #78EFE8 100%);
     font-family: 'Press Start 2P', sans-serif;
@@ -9,6 +9,7 @@ body {
     align-items: center;
 }
 
+/* Main Game Container */
 .game-container {
     display: flex;
     flex-direction: column;
@@ -18,32 +19,32 @@ body {
     width: 100vw;
 }
 
+/* Header Styles */
 header {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 20px;
+    color: #ffffff;
 }
 
 header h1 {
-    font-size: 6em;
-    color: #ffffff;
     margin: 0;
+    font-size: 5em;
 }
 
 header h2 {
-    font-size: 1.5em;
-    color: #ffffff;
     margin: 5px 0;
-    height: 1.5em;
+    text-shadow: #333;
+    font-size: 2em;
 }
 
-.hand {
-    width: 300px;
-    height: auto;
-    cursor: pointer;
-    transition: transform 0.3s ease, fill 0.3s ease;
+/* Text Outline */
+.hard-outline {
+    color: #ffffff;
+    text-shadow: 3px 4px 0 #444, 2px 2px 0 #555, 1px 1px 0 #666, 0px 0px 0 #777;
 }
+
 
 /* Hands Container */
 .hands-container {
@@ -54,9 +55,16 @@ header h2 {
     margin-top: 20px;
 }
 
+/* Hand Styles */
+.hand {
+    width: 250px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease, fill 0.3s ease;
+}
+
 /* Keyframes for Pulse Animation */
 @keyframes pulse {
-
     0%,
     100% {
         transform: scale(1);
@@ -114,18 +122,21 @@ button.rectangle-1 {
     transition: transform 0.2s ease;
 }
 
+/* Hover Effect */
 button.rectangle-1:hover {
     background: rgba(254, 0, 183, 0.8);
     transform: scale(1.05);
 }
 
+/* Score Board */
 #score-display {
     margin-top: 20px;
     font-size: 1.5em;
     color: #ffffff;
 }
 
-@media (max-width: 1200px), (max-height: 600px) {
+/* Media Queries */
+@media (max-width: 1024px)  {
     header h1 {
         font-size: 4em;
     }
@@ -152,17 +163,43 @@ button.rectangle-1:hover {
     
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px)  {
+    header h1 {
+        font-size: 2.8em;
+    }
+
+    header h2 {
+        font-size: 1.5em;
+    }
+
+    .hand {
+        width: 180px;
+    }
+
+    .hands-container {
+        gap: 5px;
+    }
+
+    button.rectangle-1 {
+        font-size: 14px;
+    }
+
+    #score-display {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px)  {
     header h1 {
         font-size: 2.5em;
     }
 
     header h2 {
-        font-size: 1em;
+        font-size: 1.2em;
     }
 
     .hand {
-        width: 120px;
+        width: 150px;
     }
 
     .hands-container {

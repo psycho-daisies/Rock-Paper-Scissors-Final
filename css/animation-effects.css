@@ -24,7 +24,7 @@
 
 #start-button:hover {
     transform: scale(1.2);
-    animation: jiggle 0.4s ease-in-out infinite;
+    animation: jiggle 0.6s ease-in-out infinite;
 }
 
 #start-button:active {
